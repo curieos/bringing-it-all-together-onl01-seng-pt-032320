@@ -51,6 +51,6 @@ class Dog
       SELECT * FROM dogs
     SQL
     
-    DB[:conn].execute(sql, self.name, self.breed)
+    DB[:conn].execute(sql)
   end
 end
