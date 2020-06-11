@@ -27,6 +27,7 @@ class Dog
   end
   
   def save
+    
     self
   end
 end
