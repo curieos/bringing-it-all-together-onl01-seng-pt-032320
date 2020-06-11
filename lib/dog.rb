@@ -75,4 +75,8 @@ class Dog
     dog.save() if !rawDog[0]
     dog
   end
+  
+  def self.find_by_name(name: String)
+    
+  end
 end
