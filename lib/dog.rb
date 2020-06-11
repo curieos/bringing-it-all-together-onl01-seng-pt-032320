@@ -9,6 +9,6 @@ class Dog
   end
   
   def create_table
-    
+    DB[:conn].execute('CREATE TABLE')
   end
 end
