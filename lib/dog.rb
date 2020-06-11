@@ -62,17 +62,18 @@ class Dog
       SELECT * FROM dogs
       WHERE name = ?
       AND breed = ?
+      LIMIT 1
     SQL
     
     rawDog = DB[:conn].execute(sql, name, breed)
     
     dog = Dog.new(
-      id: rawDog[0] ? rawDog[0][0] : nil,
-      name: rawDog[0] ? rawDog[0][1] : name,
-      breed: rawDog[0] ? rawDog[0][1] : breed
+      id: rawDog ? rawDog[0] : nil,
+      name: rawDog ? rawDog[1] : name,
+      breed: rawDog ? rawDog[1] : breed
     )
     
-    dog.save() if !rawDog[0]
+    dog.save() if !rawDog
     dog
   end
   
