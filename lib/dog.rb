@@ -27,7 +27,11 @@ class Dog
   end
   
   def save
+    sql = <<-SQL
+      INSERT INTO songs (name, album) 
+      VALUES (?, ?)
+    SQL
     
-    self
+    self.id = 
   end
 end
