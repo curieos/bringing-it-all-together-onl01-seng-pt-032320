@@ -57,13 +57,15 @@ class Dog
     Dog.new(id: rawDog[0][0], name: rawDog[0][1], breed: rawDog[0][2])
   end
   
-  def self.find_or_create_by(name: String, breed: String)
+  def self.find_or_create_by({name: String, breed: String})
     sql = <<-SQL
       SELECT * FROM dogs
       WHERE name = ?
       AND breed = ?
     SQL
     
-    DB[:conn].execute(sql, name, breed)
+    rawDog = DB[:conn].execute(sql, name, breed)
+    
+    
   end
 end
