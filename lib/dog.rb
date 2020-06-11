@@ -9,7 +9,11 @@ class Dog
   end
   
   def create_table
-    
-    DB[:conn].execute('CREATE TABLE IF NOT EXISTS dogs')
+    sql <<-SQL
+      CREATE TABLE IF NOT EXISTS dog {
+        
+      }
+    SQL
+    DB[:conn].execute(sql)
   end
 end
