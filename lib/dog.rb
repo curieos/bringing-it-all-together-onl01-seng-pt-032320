@@ -38,6 +38,10 @@ class Dog
     self
   end
   
+  def update
+    
+  end
+  
   def self.create(name: String, breed: String)
     Dog.new(name: name, breed: breed).save()
   end
