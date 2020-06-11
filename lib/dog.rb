@@ -66,7 +66,7 @@ class Dog
     
     rawDog = DB[:conn].execute(sql, name, breed)
     
-    puts rawDog[0]
+    puts rawDog
     
     Dog.new(
       id: rawDog[0] ? rawDog[0][0] : nil,
