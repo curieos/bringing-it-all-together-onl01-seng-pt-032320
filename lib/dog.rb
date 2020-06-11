@@ -57,7 +57,7 @@ class Dog
     Dog.new(id: rawDog[0][0], name: rawDog[0][1], breed: rawDog[0][2])
   end
   
-  def self.find_or_create_by()
+  def self.find_or_create_by(name: String, breed: String)
     
   end
 end
