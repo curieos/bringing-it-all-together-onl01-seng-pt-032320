@@ -64,7 +64,7 @@ class Dog
       AND breed = ?
     SQL
     
-    rawDog = DB[:conn].execute(sql, by.name, by.breed)
+    rawDog = DB[:conn].execute(sql, by[:name], by[:breed])
     
     
   end
