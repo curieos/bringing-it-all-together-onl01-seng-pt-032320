@@ -8,7 +8,7 @@ class Dog
     @breed = breed
   end
   
-  def create_table
+  def create_table()
     sql <<-SQL
       CREATE TABLE IF NOT EXISTS dog (
         id INTEGER PRIMARY KEY, 
