@@ -72,6 +72,6 @@ class Dog
       id: rawDog[0] ? rawDog[0][0] : nil,
       name: rawDog[0] ? rawDog[0][1] : name,
       breed: rawDog[0] ? rawDog[0][1] : breed
-    )
+    ).save
   end
 end
