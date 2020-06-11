@@ -67,7 +67,7 @@ class Dog
     rawDog = DB[:conn].execute(sql, name, breed)
     
     Dog.new(
-      id: rawDog[0] ? rawDog[0][0] : nil,
+      id: rawDog[0] != nil ? rawDog[0][0] : nil,
       name: rawDog[0] ? rawDog[0][1] : name,
       breed: rawDog[0] ? rawDog[0][1] : breed
     )
