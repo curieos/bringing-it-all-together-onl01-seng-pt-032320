@@ -73,5 +73,6 @@ class Dog
     )
     
     dog.save() if rawDog[0]
+    dog
   end
 end
