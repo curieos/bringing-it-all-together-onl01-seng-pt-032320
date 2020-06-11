@@ -83,5 +83,7 @@ class Dog
       WHERE name = ?
       LIMIT 1
     SQL
+    
+    rawDog = DB[:conn].execute(sql, name)
   end
 end
