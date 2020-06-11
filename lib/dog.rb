@@ -72,7 +72,7 @@ class Dog
       breed: rawDog[0] ? rawDog[0][1] : breed
     )
     
-    dog.save() if rawDog[0]
+    dog.save() if !rawDog[0]
     dog
   end
 end
